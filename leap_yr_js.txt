@@ -1,0 +1,22 @@
+var readlineSync=require('readline-sync');
+
+var userName=readlineSync.question("Whats your name? ");
+
+
+var date=parseInt(prompt("Hello " + userName + " tell us the year of your birth date "));
+
+function check_leap(year)
+{
+  if ((year%4===0) && (year%100!==0) || (year%400===0))
+  {
+    console.log("Hurray your birthdate is a leap year! Share this on social media");
+  }
+
+  else
+  {
+    console.log("Sorry chap , your birthdate is not a leap year!");
+  }
+
+}
+
+check_leap(date);
